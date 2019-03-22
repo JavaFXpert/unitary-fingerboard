@@ -103,7 +103,7 @@ class UnitaryGrid(pygame.sprite.Sprite):
     def normalize_desired_unitary(self):
         matrix_sum = self.desired_stochastic_matrix.sum()
         if matrix_sum != 0:
-            scale_factor = NUM_STATE_DIMS / matrix_sum
+            scale_factor = NUM_STATE_DIMS / matrix_sum * 2
             self.desired_stochastic_matrix *= scale_factor
             print("desired_matrix.sum(): ", self.desired_stochastic_matrix.sum())
         else:

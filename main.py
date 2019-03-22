@@ -84,14 +84,16 @@ def main():
 
     circuit_grid_model = CircuitGridModel(NUM_QUBITS, 18)
 
-    circuit_grid_model.set_node(0, 1, CircuitGridNode(node_types.Y))
-    circuit_grid_model.set_node(2, 1, CircuitGridNode(node_types.Y))
+    circuit_grid_model.set_node(0, 0, CircuitGridNode(node_types.Y))
+    circuit_grid_model.set_node(1, 0, CircuitGridNode(node_types.Y))
+    circuit_grid_model.set_node(2, 0, CircuitGridNode(node_types.Y))
+    circuit_grid_model.set_node(3, 0, CircuitGridNode(node_types.Y))
 
-    circuit_grid_model.set_node(1, 2, CircuitGridNode(node_types.X, 0, 0))
-    circuit_grid_model.set_node(2, 3, CircuitGridNode(node_types.X, 0, 1))
+    circuit_grid_model.set_node(1, 1, CircuitGridNode(node_types.X, 0, 0))
+    circuit_grid_model.set_node(2, 2, CircuitGridNode(node_types.X, 0, 1))
 
-    circuit_grid_model.set_node(1, 4, CircuitGridNode(node_types.Y))
-    circuit_grid_model.set_node(3, 4, CircuitGridNode(node_types.Y))
+    circuit_grid_model.set_node(1, 3, CircuitGridNode(node_types.Y))
+    circuit_grid_model.set_node(2, 3, CircuitGridNode(node_types.Y))
 
 
 
@@ -570,6 +572,7 @@ def print_midi_device_info():
               (i, interf, name, opened, in_out))
 
 def compute_pitch_by_bitstr(bitstr):
+    # pitches = [60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90]
     pitches = [60,62,64,65,67,69,71,72,74,76,77,79,81,83,84,86]
     # pitches = [60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75]
     # pitches = [60,63,65,67,70,72,75,77,79,82,84,86,89,91,93,96]
